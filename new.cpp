@@ -1,7 +1,6 @@
 #include <iostream>
 #include <cstring>  // For strcmp
 #include <iomanip>
-//#include <string>
 #include <cmath>
 #include <vector>
 #include<fstream>
