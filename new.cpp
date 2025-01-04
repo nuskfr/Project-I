@@ -134,14 +134,14 @@ char username[20], password[20];
 class Admin {
 public:
     void display() {
-        cout << "I am admin" << endl;
+        cout << "Welcome to admin section" << endl;
     }
 } a;
 
 class User {
 public:
     void display() {
-        cout << "I am user" << endl;
+        cout << "Welcome to our restaurant" << endl;
     }
 } u;
 
@@ -204,6 +204,7 @@ void adminActions(vector<MenuItem>& menu) {
                 addMenuItem(menu);
                 break;
             case 2:
+                displayMenu(menu);
                 deleteMenuItem(menu);
                 break;
             case 3:
@@ -238,6 +239,7 @@ void userActions(const vector<MenuItem>& menu, vector<Table>& tables) {
 
     do {
         int index;
+        displayMenu(menu);
         cout << "\nChoose a menu item to add to your order (by index starting from 1): ";
         cin >> index;
         if (index > 0 && index <= static_cast<int>(menu.size())) {
